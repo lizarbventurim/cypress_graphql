@@ -1,6 +1,6 @@
 # cypress_graphql
 
-Este repositório contém testes para uma API GraphQL utilizando Cypress. Os testes incluem a validação do schema e dos resultados retornados pela API.
+Este repositório contém testes para uma [[API GraphQL](https://countries.trevorblades.com/)] utilizando o Cypress. Os testes incluem a validação do schema e dos resultados retornados pela API.
 
 ## Estrutura do Projeto
 
