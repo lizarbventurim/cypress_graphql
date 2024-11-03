@@ -1,14 +1,16 @@
-//Realiza a validação JSON Schema
+import Ajv from "ajv";
+
 Cypress.Commands.add("validateSchema", (schema, body) => {
-    cy.fixture(schema).then((json) => {
-      const validate = ajv.compile(json);
-      const isValid = validate(body);
-      if (!isValid)
-        validate.errors.map((err) => {
-          console.log(err);
-          throw new Error(
-            `Propriedade: ${err.instancePath} | Tipo: ${err.keyword} | Messagem: ${err.message}`
-          );
-        });
+  const ajv = new Ajv();
+  const validate = ajv.compile(schema);
+  const valid = validate(body);
+
+  if (!valid) {
+    validate.errors.map((err) => {
+      console.log(err);
+      throw new Error(
+        `Propriedade: ${err.instancePath} | Tipo: ${err.keyword} | Messagem: ${err.message}`
+      );
     });
-  });
+  }
+});
