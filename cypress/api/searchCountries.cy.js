@@ -2,7 +2,7 @@
 
 import searchCountriesSchema from "../fixtures/schema/searchCountries.json";
 
-describe("Buscar países", () => {
+describe("Buscar paíse da america do sul", () => {
   const queryString = `{
     continent(code: "SA") {
       name
@@ -12,7 +12,7 @@ describe("Buscar países", () => {
     }
   }`;
 
-  it("Buscar países da America do Sul", () => {
+  it("Buscar países da America do Sul e verificar se existe o Brasil", () => {
     cy.api({
       url: "/",
       method: "POST",
