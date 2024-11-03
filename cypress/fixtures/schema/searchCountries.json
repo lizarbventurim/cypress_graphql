@@ -1,0 +1,29 @@
+{
+    "type": "object",
+    "properties": {
+      "data": {
+        "type": "object",
+        "properties": {
+          "continent": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "countries": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "name": { "type": "string" }
+                  },
+                  "required": ["name"]
+                }
+              }
+            },
+            "required": ["name", "countries"]
+          }
+        },
+        "required": ["continent"]
+      }
+    },
+    "required": ["data"]
+  }
