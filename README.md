@@ -4,10 +4,12 @@ Este repositório contém testes para uma API GraphQL utilizando Cypress. Os tes
 
 ## Estrutura do Projeto
 
+```
 fixtures/
-    schema/
-        
+└── schema/
+    
 support/
+```
 
 ### Descrição dos Arquivos
 
